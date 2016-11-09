@@ -87,6 +87,8 @@
             if(resourceCache.hasOwnProperty(k) &&
                !resourceCache[k]) {
                 ready = false;
+                // console.log(resourceCache.hasOwnProperty(k));   // test
+                // console.log(resourceCache[k]);    // test
             }
         }
         return ready;
