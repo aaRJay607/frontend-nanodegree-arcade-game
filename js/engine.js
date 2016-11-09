@@ -109,6 +109,16 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
+
+        //  ctx.font="50px sans-serif";
+        //  ctx.fillStyle = "blue";
+        //  ctx.textAlign = "center";
+        //  ctx.fillText("Classic Frogger!",250,40);
+         //
+        //  ctx.strokeStyle = "black";
+        //  ctx.lineWidth = 0;
+        //  ctx.strokeText("Classic Frogger!",250,20);
+
         var rowImages = [
                 'images/water-block.png',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 3 of stone
