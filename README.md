@@ -1,6 +1,33 @@
-frontend-nanodegree-arcade-game
-===============================
+## Classic Frogger: An Arcade Game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+[Play Now](https://aarjay607.github.io/frontend-nanodegree-arcade-game/)
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+### Installation
+
+This game doesn't require any installation or software. Just click on the link above or download the project folder and open *index.html* file in the browser to play the game.
+
+### Instructions
+
+#### About the game :
+
+* The main objective of the game is to help player cross the screen to the water avoiding bugs in the process.
+* If caught by any bugs, then the player will be eaten.
+* Player has 3 lives. Every time the player dies, it's position is reset. If the player dies the third time, the game is over.
+
+#### Controls :
+
+Use up, down, left and right arrow keys to move the player.
+
+#### Score :
+
+Each time the player reaches water, he scores 10 points.
+
+### Coming up
+
+* New levels.
+* New bugs.
+* New player avatars.
+
+### About the project
+
+This project was created for Udacity's Front-End Web developer Nanodegree.

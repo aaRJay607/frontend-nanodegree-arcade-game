@@ -105,21 +105,52 @@ var Engine = (function(global) {
      * they are flipbooks creating the illusion of animation but in reality
      * they are just drawing the entire screen over and over.
      */
+
     function render() {
-        /* This array holds the relative URL to the image used
-         * for that particular row of the game level.
+      /**
+      * @description This block is used to print end game.
+      */
+        if (player.life <= 0) {
+            ctx.clearRect(0,0,505,606);
+            ctx.font="50px arial";
+            ctx.fillStyle = "red";
+            ctx.textAlign = "center";
+            ctx.fillText("Game Over!",252,280);
+            ctx.fillStyle = "black";
+            ctx.font="25px arial";
+            ctx.fillText("Refresh browser or F5 to Start Again...",252,333);
+            return 0;
+        }
+
+        /**
+        * @description This block below is used to display the scoreboard
+        */
+         ctx.clearRect(0,0,505,45);
+         ctx.font="20px arial";
+         ctx.fillStyle = "black";
+         ctx.fillText("Score : "+player.score,0,40);
+         ctx.fillText("Life : "+player.life,440,40);
+
+         /**
+         * @description This block will display instructions at the start
          */
+         if (flag > 0) {
+            player.scoreComment();
+         }
 
-        //  ctx.font="50px sans-serif";
-        //  ctx.fillStyle = "blue";
-        //  ctx.textAlign = "center";
-        //  ctx.fillText("Classic Frogger!",250,40);
-         //
-        //  ctx.strokeStyle = "black";
-        //  ctx.lineWidth = 0;
-        //  ctx.strokeText("Classic Frogger!",250,20);
+         /**
+         * @description To print score comments for a number of game ticks. flag2 variable's value determines the number of game ticks this has to be printed.
+         */
+         if (player.flag2 > 0) {    // When player reaches the water.
+            player.scoreComment();
+         } else if (player.flag2 < 0) {   // When player is eaten by a bug.
+            player.scoreComment();
+         }
 
-        var rowImages = [
+         /**
+         * @description This array holds the relative URL to the image used for that particular row of the game level.
+         */
+         var rowImages = [
                 'images/water-block.png',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 3 of stone
                 'images/stone-block.png',   // Row 2 of 3 of stone
@@ -171,7 +202,7 @@ var Engine = (function(global) {
      * those sorts of things. It's only called once by the init() method.
      */
     function reset() {
-        // noop
+
     }
 
     /* Go ahead and load all of the images we know we're going to need to
