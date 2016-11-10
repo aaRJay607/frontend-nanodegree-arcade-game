@@ -157,20 +157,24 @@ player.prototype.scoreComment = function() {
 * @param key - Here the string value of the keycode from the allowedKeys array is passed.
 */
 player.prototype.handleInput = function(key) {
-    if (key === 'left') {
-        if(this.x > 0)
+    if (key === "left") {
+        if(this.x > 0) {
             this.x = this.x - 100;
-    } else if (key === 'right') {
-        if(this.x < 400)
+        }
+    } else if (key === "right") {
+        if(this.x < 400) {
             this.x = this.x + 100;
-    } else if (key === 'up') {
-        if(this.y > -10)
+        }
+    } else if (key === "up") {
+        if(this.y > -10) {
             this.y = this.y - 83;
-    } else if (key === 'down') {
-        if(this.y < 405)
+        }
+    } else if (key === "down") {
+        if(this.y < 405) {
             this.y = this.y + 83;
+        }
     }
-}
+};
 
 /**
 * @description All enemy objects in an array called allEnemies
